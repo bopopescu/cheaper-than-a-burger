@@ -69,3 +69,7 @@ app.get('/', function(req, res) {
        console.error(error);
     });
 });
+
+app.get('/recipes/bean-burritos', function(req, res) {
+  res.render('recipes/bean-burritos');
+});
