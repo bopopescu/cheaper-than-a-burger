@@ -10,6 +10,7 @@ var port                    = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs') // register the template engine
 app.set('views', './views') // specify the views directory
+app.use(express.static(__dirname + '/views'));
 
 // Start Server 
 app.listen(port, function () {
@@ -29,13 +30,13 @@ firebase.initializeApp(config);
 
 // Routes
 app.get('/', function(req, res) {
-	console.log("bark");
-	firebase.auth().signInAnonymously().then(function(firebaseUser) {
+  console.log("bark");
+  firebase.auth().signInAnonymously().then(function(firebaseUser) {
 
       firebase.database().ref('/').once('value', function(snapshot) {
         res.render('index', {
-		  data: snapshot,
-		});
+      data: snapshot,
+    });
 
       }, function(error) {
         console.error(error);
