@@ -1,0 +1,21 @@
+{
+  "name": "meow",
+  "version": "1.0.0",
+  "repository": "https://github.com/deeguo/cheaper-than-a-burger",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js" 
+  },
+  "engines": {
+    "node": "8.6.0",
+    "npm": "5.3.0"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.0",
+    "ejs": "^2.5.6",
+    "firebase-admin": "^5.1.0"
+  }
+}
+
