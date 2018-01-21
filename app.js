@@ -12,7 +12,7 @@ app.set('view engine', 'ejs') // register the template engine
 app.set('views', './views') // specify the views directory
 app.use(express.static(__dirname + '/views'));
 
-// Start Server 
+// Start Server
 app.listen(port, function () {
   console.log('CHEAPER THAN A BURGER ### Port: 5000 // ')
 })
@@ -28,7 +28,6 @@ var config = {
 
 firebase.initializeApp(config);
 
-// Routes
 app.get('/', function(req, res) {
   console.log("bark");
   firebase.auth().signInAnonymously().then(function(firebaseUser) {
@@ -41,10 +40,9 @@ app.get('/', function(req, res) {
       }, function(error) {
         console.error(error);
       });
-      
+
     })
     .catch(function(error) {
        console.error(error);
     });
 });
-
