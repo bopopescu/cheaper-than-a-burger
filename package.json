@@ -1,10 +1,13 @@
 {
-  "name": "memory",
+  "name": "meow",
   "version": "1.0.0",
   "repository": "https://github.com/deeguo/cheaper-than-a-burger",
   "main": "index.js",
   "scripts": {
     "start": "node app.js" 
+  },
+  "engines": {
+    "node": "8.6.0"
   },
   "license": "ISC",
   "dependencies": {
