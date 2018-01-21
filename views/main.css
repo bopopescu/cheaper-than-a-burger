@@ -43,8 +43,16 @@ body {
 }
 
 .cover-wrapper {
-  padding-top: 100px;
+  margin: -40px;
+  height: 100%;
+  padding-top: 75px;
   text-align: center;
+  background-color: b6eaea;
+}
+
+.cover-image {
+  border: 5px solid #d1cfcf;
+  border-radius: 40px;
 }
 
 .intro {
@@ -63,6 +71,7 @@ body {
   text-align: center;
   background-color: gray;
   padding-top: 40px;
+  opacity: 0.7;
 }
 
 .recipe > a > h3 {
@@ -141,6 +150,11 @@ button {
 button> a {
   padding: 10px 25px;
   font-size:1.2em;
+}
+
+.cover-button {
+  background-color: #fff;
+  color: #FFAE94;
 }
 
 .button-text {
