@@ -1,17 +1,27 @@
 <head>
     <title>Cheaper Than a Burger</title>
     <link href="../main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body>
 
     <div class="single-recipe-heading">
 
+    <script>
+      $(document).ready(function(){
+           $.post("/add-money", {bank: <%= bank %> + 2.67}, function(response, status) {
+           // send correct value of bank (bank = bank + cost)
+           console.log(response);
+       });
+      });
+    </script>
+
       <div class="single-recipe-title">
         <h1>Grilled Pork and Pineapple</h1>
         <h2>Makes 4 servings</h2>
         <h2>$2.67 per serving</h2>
-        <button><a href="../savings.html">I made it!</a></button>
+        <button><a href="../savings">I made it!</a></button>
       </div>
 
       <img src="../images/pork-and-pineapple.jpg" class="single-recipe-img" width="350px" height="350px">

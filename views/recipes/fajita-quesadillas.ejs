@@ -1,9 +1,19 @@
 <head>
     <title>Cheaper Than a Burger</title>
     <link href="../main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body>
+
+  <script>
+      $(document).ready(function(){
+           $.post("/add-money", {bank: <%= bank %> + 0.43}, function(response, status) {
+           // send correct value of bank (bank = bank + cost)
+           console.log(response);
+       });
+      });
+    </script>
 
     <div class="single-recipe-heading">
 
@@ -11,7 +21,7 @@
         <h1>Fajita Style Quesadillas</h1>
         <h2>Makes 8 servings</h2>
         <h2>$0.43 per serving</h2>
-        <button><a href="../savings.html">I made it!</a></button>
+        <button><a href="../savings">I made it!</a></button>
       </div>
 
       <img src="../images/quesadillas.jpg" class="single-recipe-img" width="350px" height="350px">
