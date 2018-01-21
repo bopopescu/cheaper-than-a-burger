@@ -2,6 +2,7 @@
 /** Color Palette
 logo blue: #00D4D4
 logo yellow: #FFD588
+logo peach: #FFAE94
 
 /** Global Styles **/
 
@@ -31,19 +32,20 @@ p {
   line-height: 1em;
 }
 
-body {
-  margin: 40px;
-}
-
 /** Browse Page **/
+
+header {
+  background-color: #fff;
+  padding: 30px 40px;
+}
 
 .logo {
   width: 60%;
-  margin-bottom: 30px;
 }
 
 .recipe-grid {
   display: grid;
+  margin: 40px;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   grid-gap: 15px;
   grid-template-rows: 200px;
@@ -56,9 +58,25 @@ body {
   padding-top: 40px;
 }
 
-.recipe > a > h3 {
+.recipe > div {
+  position: relative;
+}
+
+.recipe > div > h3 {
   color: #000;
   font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recipe {
+  opacity: .8;
+}
+
+.recipe-page {
+  margin: 40px;
 }
 
 #bean-burritos {
