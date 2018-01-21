@@ -1,6 +1,8 @@
 // Connect Firebase
 var firebase = require('firebase');
-var ejs = require('ejs')
+var ejs = require('ejs');
+
+var munny = 0;
 
 var express                 = require('express');
 var app                     = express();
@@ -28,14 +30,35 @@ var config = {
 
 firebase.initializeApp(config);
 
+var recipes = [];
+
+class Recipe {
+  constructor(name, price, ingredients, directions) {
+    this.name = name;
+    this.price = price;
+    this.ingredients = ingredients;
+    this.directions = directions;
+  }
+}
+
 app.get('/', function(req, res) {
-  console.log("bark");
   firebase.auth().signInAnonymously().then(function(firebaseUser) {
 
       firebase.database().ref('/').once('value', function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+          var child = childSnapshot.val();
+          ingredients = [];
+          Array.prototype.forEach.call(child._ingredients, child => {
+            ingredients.push(ingredient);
+          });
+          var recipe = new Recipe(child._name, child._price, ingredients, child._directions);
+          recipes.push(recipe);
+        })
+
         res.render('index', {
-      data: snapshot,
-    });
+          data: recipes,
+          bank: munny
+        });
 
       }, function(error) {
         console.error(error);

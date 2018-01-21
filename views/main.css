@@ -2,6 +2,7 @@
 /** Color Palette
 logo blue: #00D4D4
 logo yellow: #FFD588
+logo peach: #FFAE94
 
 /** Global Styles **/
 
@@ -31,15 +32,15 @@ p {
   line-height: 1.5em;
 }
 
-body {
-  margin: 40px;
-}
-
 /** Browse Page **/
+
+header {
+  background-color: #fff;
+  padding: 30px 40px;
+}
 
 .logo {
   width: 60%;
-  margin-bottom: 30px;
 }
 
 .cover-wrapper {
@@ -61,6 +62,7 @@ body {
 
 .recipe-grid {
   display: grid;
+  margin: 40px;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   grid-gap: 15px;
   grid-template-rows: 200px;
@@ -74,62 +76,75 @@ body {
   opacity: 0.7;
 }
 
-.recipe > a > h3 {
+.recipe > div {
+  position: relative;
+}
+
+.recipe > div > h3 {
   color: #000;
   font-weight: bold;
 }
 
+.recipe {
+  opacity: .8;
+}
+
+.recipe-page {
+  margin: 40px;
+}
+
 #bean-burritos {
-  background-image: url(images/bean-burritos.jpg);
+  background-image: url(images/bean-burritos-fade.png);
 }
 
 #chicken-noodle-casserole {
-  background-image: url(images/chicken-noodle-casserole.jpg);
+  background-image: url(images/chicken-noodle-casserole-fade.png);
 }
 
 #fajita-quesadillas  {
-  background-image: url(images/quesadillas.jpg);
+  background-image: url(images/quesadillas-fade.png);
 }
 
 #fajita-ranch-chicken-wraps {
-  background-image: url(images/chicken-ranch-fajita.jpg);
+  background-image: url(images/chicken-ranch-fajita-fade.png);
 }
 
 #fish-and-peppers {
-  background-image: url(images/fish-and-peppers.jpg);
+  background-image: url(images/fish-and-peppers-fade.png);
 }
 
 #fish-tacos {
-  background-image: url(images/fishtacos.jpg);
+  background-image: url(images/fishtacos-fade.png);
 }
 
 #grilled-pork-and-pineapple  {
-  background-image: url(images/pork-and-pineapple.jpg);
+  background-image: url(images/pork-and-pineapple-fade.png);
 }
 
 #herbed-salmon  {
-  background-image: url(images/herbed-salmon.jpg);
+  background-image: url(images/herbed-salmon-fade.png);
 }
 
 #jamaican-stir-fry  {
-  background-image: url(images/jamaican-stir-fry.jpg);
+  background-image: url(images/jamaican-stir-fry-fade.png);
 }
 
 #pork-kabobs {
-  background-image: url(images/five-spice-pork-kabobs.jpg);
+  background-image: url(images/five-spice-pork-kabobs-fade.png);
 }
 
 #sausage-eggwiches  {
-  background-image: url(images/sausage-eggwich.jpg);
+  background-image: url(images/sausage-eggwich-fade.png);
 }
 
 #shrimp-bisque  {
-  background-image: url(images/shrimp-bisque.jpg);
+  background-image: url(images/shrimp-bisque-fade.png);
 }
 
 #veggie-lasagna  {
-  background-image: url(images/veggie-lasagna.jpg);
+  background-image: url(images/veggie-lasagna-fade.png);
 }
+
 
 /** Recipe Page **/
 
