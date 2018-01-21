@@ -58,7 +58,7 @@ app.get('/', function(req, res) {
           recipes.push(recipe);
         })
 
-        res.render('index', {
+        res.render('cover', {
           data: recipes,
           bank: munny
         });
