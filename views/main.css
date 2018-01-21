@@ -53,7 +53,64 @@ body {
 .recipe {
   text-align: center;
   background-color: gray;
-  padding-top: 50px;
+  padding-top: 40px;
+}
+
+.recipe > a > h3 {
+  color: #000;
+  font-weight: bold;
+}
+
+#bean-burritos {
+  background-image: url(images/bean-burritos.jpg);
+}
+
+#chicken-noodle-casserole {
+  background-image: url(images/chicken-noodle-casserole.jpg);
+}
+
+#fajita-quesadillas  {
+  background-image: url(images/quesadillas.jpg);
+}
+
+#fajita-ranch-chicken-wraps {
+  background-image: url(images/chicken-ranch-fajita.jpg);
+}
+
+#fish-and-peppers {
+  background-image: url(images/fish-and-peppers.jpg);
+}
+
+#fish-tacos {
+  background-image: url(images/fishtacos.jpg);
+}
+
+#grilled-pork-and-pineapple  {
+  background-image: url(images/pork-and-pineapple.jpg);
+}
+
+#herbed-salmon  {
+  background-image: url(images/herbed-salmon.jpg);
+}
+
+#jamaican-stir-fry  {
+  background-image: url(images/jamaican-stir-fry.jpg);
+}
+
+#pork-kabobs {
+  background-image: url(images/five-spice-pork-kabobs.jpg);
+}
+
+#sausage-eggwiches  {
+  background-image: url(images/sausage-eggwich.jpg);
+}
+
+#shrimp-bisque  {
+  background-image: url(images/shrimp-bisque.jpg);
+}
+
+#veggie-lasagna  {
+  background-image: url(images/veggie-lasagna.jpg);
 }
 
 /** Recipe Page **/
@@ -84,4 +141,43 @@ button {
 
 .single-recipe-title {
   margin-bottom: 30px;
+}
+
+/** Savings **/
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+.savings {
+  text-align: center;
+}
+
+.dollar {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.bag {
+  position: absolute;
+  top: 100px;
+  left: 100px;
 }
