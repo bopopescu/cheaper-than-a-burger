@@ -29,7 +29,6 @@ var config = {
 firebase.initializeApp(config);
 
 app.get('/', function(req, res) {
-  console.log("bark");
   firebase.auth().signInAnonymously().then(function(firebaseUser) {
 
       firebase.database().ref('/').once('value', function(snapshot) {
