@@ -169,8 +169,7 @@ button {
   text-align: center;
 }
 
-.dollar {
-  display: block;
+/** .dollar {
   position: relative;
   top: 0;
   left: 0;
@@ -181,3 +180,9 @@ button {
   top: 100px;
   left: 100px;
 }
+
+.money {
+  position: relative;
+  left: 0;
+  right: 0;
+} */
