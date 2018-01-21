@@ -7,14 +7,15 @@
 
   <body>
 
-    <div class="savings">
-      <h1>You saved $<%= bank %> today!</h1>
-      <h2>Total savings: $<%= bank %></h2>
+    <div class="savings-wrapper">
+      <h1>You've saved $<%= (bank * 1 ).toFixed(2) %> so far!</h1>
+      <h2>Keep it up!</h2>
       <div class="money">
         <img src="images/dollar.png" alt="Savings!" class="animated slideInDown dollar">
         <img src="images/money_bag.png" alt="Savings!" class="bag">
-        <h2>In a year, that would add up to $<%= (bank * 365).toFixed(2) %></h2>
       </div>
+
+    <a href="index"><button>Back to Recipes</button></a>
     </div>
 
   </body>
