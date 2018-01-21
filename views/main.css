@@ -146,6 +146,16 @@ header {
   margin: 40px;
 }
 
+.map {
+  margin: 25px 60px 0 40px;
+  float: right;
+}
+
+iframe {
+  width: 300px;
+  height: 300px;
+}
+
 #bean-burritos {
   background-image: url(images/bean-burritos-fade.png);
 }
