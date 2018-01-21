@@ -28,7 +28,7 @@ a {
 }
 
 p {
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 body {
@@ -40,6 +40,15 @@ body {
 .logo {
   width: 60%;
   margin-bottom: 30px;
+}
+
+.cover-wrapper {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.intro {
+  font-size: 1.25em;
 }
 
 .recipe-grid {
@@ -120,15 +129,21 @@ body {
 }
 
 button {
-  padding: 15px 40px;
+  padding: 20px 50px;
   margin-top: 20px;
   border-radius: 20px;
   border-color: #e2e2e2;
   background-color: #6AD3D1;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+button> a {
+  padding: 10px 25px;
+  font-size:1.2em;
 }
 
 .button-text {
-  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -165,23 +180,28 @@ button {
   animation-name: slideInDown;
 }
 
-.savings {
+.savings-wrapper {
   text-align: center;
 }
 
-/** .dollar {
-  position: relative;
+ .dollar {
+  margin: 0 auto;
+  display: block;
+  /** position: relative;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 
 .bag {
+  margin: -50 auto;
+  display: block;
+  /**
   position: absolute;
   top: 100px;
-  left: 100px;
+  left: 100px; */
 }
 
-.money {
+/** .money {
   position: relative;
   left: 0;
   right: 0;
