@@ -33,7 +33,8 @@ firebase.initializeApp(config);
 var recipes = [];
 
 class Recipe {
-  constructor(price, ingredients, directions) {
+  constructor(name, price, ingredients, directions) {
+    this.name = name;
     this.price = price;
     this.ingredients = ingredients;
     this.directions = directions;
@@ -48,16 +49,18 @@ app.get('/', function(req, res) {
       firebase.database().ref('/').once('value', function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
           var child = childSnapshot.val();
+          ingredients = [];
           Array.prototype.forEach.call(child._ingredients, child => {
             ingredients.push(ingredient);
           });
-          var recipe = new Recipe(child._price, ingredients, child._directions);
+          var recipe = new Recipe(child._name, child._price, ingredients, child._directions);
           recipes.push(recipe);
         })
 
         res.render('index', {
-      data: recipes,
-    });
+          data: recipes,
+          bank: munny
+        });
 
       }, function(error) {
         console.error(error);
