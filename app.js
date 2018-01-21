@@ -150,8 +150,8 @@ app.get('/recipes/jamaican-stir-fry', function(req, res) {
     });
 });
 
-app.get('/recipes/pork-kabobs', function(req, res) {
-  res.render('recipes/pork-kabobs', {
+app.get('/recipes/pork-kebabs', function(req, res) {
+  res.render('recipes/pork-kebabs', {
         data: recipes,
         bank: munny
     });
@@ -186,9 +186,6 @@ app.get('/savings', function(req, res) {
 });
 
 app.post('/add-money', function(req, res) {
-  // update global munny with correct value
-  //let bank = JSON.parse(req.body);
-   //
   munny = req.body.bank;
   console.log("BANK: " + req.body.bank);
   res.send({money: munny});
