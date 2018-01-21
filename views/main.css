@@ -33,23 +33,68 @@ p {
   line-height: 1.5em;
 }
 
-/** Browse Page **/
+body {
+  margin: 20px 40px;
+}
+
+button {
+  padding: 20px 50px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border-color: #e2e2e2;
+  background-color: #6AD3D1;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+button > a {
+  padding: 10px 25px;
+  font-size:1.2em;
+}
+
+/** Cover Page **/
 
 header {
-  background-color: #fff;
+  background-color: #eee;
   padding: 30px 40px;
+  margin: 0 -20px;
 }
 
 .logo {
   width: 60%;
 }
 
+.small-bag {
+  width: 40px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.amount-saved {
+  float: right;
+  font-weight: bold;
+}
+
+.bank-balance {
+  font-size: 1.8em;
+}
+
+.money-saved {
+  margin-top: 15px;
+  float: right;
+  color: #777;
+}
+
 .cover-wrapper {
   margin: -40px;
-  height: 100%;
+  height: 120%;
   padding-top: 75px;
   text-align: center;
-  background-color: b6eaea;
+  background-color: #b6eaea;
+}
+
+.cover-wrapper > header {
+  background-color: #b6eaea;
 }
 
 .cover-image {
@@ -60,6 +105,13 @@ header {
 .intro {
   font-size: 1.25em;
 }
+
+.cover-button {
+  background-color: #fff;
+  color: #FFAE94;
+}
+
+/** Browse Page **/
 
 .recipe-grid {
   display: grid;
@@ -73,17 +125,21 @@ header {
 .recipe {
   text-align: center;
   background-color: gray;
-  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 15px;
+  padding-top: 40px;
+  opacity: .8;
+  background-size:300px 300px;
 }
 
 .recipe > div {
   position: relative;
 }
 
-.recipe {
-  opacity: .8;
-  background-size:300px 300px;
+.recipe-price {
+  font-size: 1.8em;
 }
 
 .recipe-page {
@@ -143,45 +199,44 @@ header {
 }
 
 
-/** Recipe Page **/
+/** Single Recipe Page **/
 
 .single-recipe-img {
   float: right;
+  border-radius: 15px;
 }
 
-button {
-  padding: 20px 50px;
-  margin-top: 20px;
-  border-radius: 20px;
-  border-color: #e2e2e2;
-  background-color: #6AD3D1;
-  font-weight: bold;
-  font-size: 1.3em;
+.ingredients  {
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
-button> a {
-  padding: 10px 25px;
-  font-size:1.2em;
+ol {
+  max-width: 40em;
 }
 
-.cover-button {
-  background-color: #fff;
-  color: #FFAE94;
+ol > li {
+  margin: 1em;
+  line-height: 1.5em;
 }
 
-.button-text {
-  font-weight: bold;
+ul > li {
+  margin: .5em;
 }
 
 .single-recipe-heading {
+  margin: 40px 0 80px 0;
   display: flex;
   justify-content: space-around;
   text-align: center;
   flex-wrap: wrap;
+  background-color: #eee;
+  padding: 40px;
+  margin: 0 -20px;
 }
 
 .single-recipe-title {
-  margin-bottom: 30px;
+  margin: 40px 0;
 }
 
 /** Savings **/
@@ -219,7 +274,7 @@ button> a {
 }
 
 .bag {
-  margin: -50 auto;
+  margin: -50px auto 20px;
   display: block;
   /**
   position: absolute;

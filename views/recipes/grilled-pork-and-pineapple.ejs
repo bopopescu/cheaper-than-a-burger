@@ -10,7 +10,7 @@
 
     <script>
       $(document).ready(function(){
-           $.post("/add-money", {bank: <%= bank %> + 2.67}, function(response, status) {
+           $.post("/add-money", {bank: <%= bank %> + 5.99 - 2.67}, function(response, status) {
            // send correct value of bank (bank = bank + cost)
            console.log(response);
        });
