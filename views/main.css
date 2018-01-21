@@ -65,7 +65,7 @@ header {
 }
 
 .small-bag {
-  width: 40px;
+  width: 55px;
   margin-right: 20px;
   margin-top: 10px;
 }
@@ -73,6 +73,7 @@ header {
 .amount-saved {
   float: right;
   font-weight: bold;
+  font-size: 1.2em;
 }
 
 .bank-balance {
